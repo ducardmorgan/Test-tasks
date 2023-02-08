@@ -1,0 +1,15 @@
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\Chips.exe
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\Chips.deps.json
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\Chips.runtimeconfig.json
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\Chips.dll
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\ref\Chips.dll
+E:\Работа\На студентов\Chips\bin\Debug\net6.0\Chips.pdb
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.csproj.AssemblyReference.cache
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.GeneratedMSBuildEditorConfig.editorconfig
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.AssemblyInfoInputs.cache
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.AssemblyInfo.cs
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.csproj.CoreCompileInputs.cache
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.dll
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\ref\Chips.dll
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.pdb
+E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.genruntimeconfig.cache
