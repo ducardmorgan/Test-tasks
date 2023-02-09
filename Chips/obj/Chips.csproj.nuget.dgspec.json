@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Работа\\На студентов\\Chips\\Chips.csproj": {}
+    "E:\\GitHub\\Test-tasks\\Chips\\Chips.csproj": {}
   },
   "projects": {
-    "E:\\Работа\\На студентов\\Chips\\Chips.csproj": {
+    "E:\\GitHub\\Test-tasks\\Chips\\Chips.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Работа\\На студентов\\Chips\\Chips.csproj",
+        "projectUniqueName": "E:\\GitHub\\Test-tasks\\Chips\\Chips.csproj",
         "projectName": "Chips",
-        "projectPath": "E:\\Работа\\На студентов\\Chips\\Chips.csproj",
+        "projectPath": "E:\\GitHub\\Test-tasks\\Chips\\Chips.csproj",
         "packagesPath": "C:\\Users\\RAYzum 3.0\\.nuget\\packages\\",
-        "outputPath": "E:\\Работа\\На студентов\\Chips\\obj\\",
+        "outputPath": "E:\\GitHub\\Test-tasks\\Chips\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

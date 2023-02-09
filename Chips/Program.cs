@@ -1,6 +1,6 @@
 ﻿using Chips;
 Chip chip = new Chip();
-int[] Test1 = { 1, 5, 9, 10, 5 };
+int[] Test1 = { 6, 2, 4, 10, 3 };
 int[] Test2 = { 1, 2, 3 };
 int[] Test3 = { 0, 1, 1, 1, 1, 1, 1, 1, 1, 2 };
 

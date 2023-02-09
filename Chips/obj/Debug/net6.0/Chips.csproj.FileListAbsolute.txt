@@ -13,3 +13,18 @@ E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.dll
 E:\Работа\На студентов\Chips\obj\Debug\net6.0\ref\Chips.dll
 E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.pdb
 E:\Работа\На студентов\Chips\obj\Debug\net6.0\Chips.genruntimeconfig.cache
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\Chips.exe
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\Chips.deps.json
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\Chips.runtimeconfig.json
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\Chips.dll
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\ref\Chips.dll
+E:\GitHub\Test-tasks\Chips\bin\Debug\net6.0\Chips.pdb
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.csproj.AssemblyReference.cache
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.AssemblyInfoInputs.cache
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.AssemblyInfo.cs
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.csproj.CoreCompileInputs.cache
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.dll
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\ref\Chips.dll
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.pdb
+E:\GitHub\Test-tasks\Chips\obj\Debug\net6.0\Chips.genruntimeconfig.cache

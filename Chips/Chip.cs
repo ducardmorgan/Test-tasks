@@ -73,6 +73,7 @@ namespace Chips
                 {
                     if(CheckCloseLeft(indexOfLeft)) Move(i, indexOfLeft);
                     else if (CheckCloseRight(indexOfRight)) Move(i,indexOfRight);
+                    else Move(i, indexOfLeft);
                 }
             }
             return $"Steps ={steps}";
