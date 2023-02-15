@@ -47,11 +47,53 @@ namespace Chips
             p_steps += step;
         }
 
-        void HardMove(int indexOfMax, int indexOfMin, int stepsLeftSide, int stepsRightSide , int indexOfRight, int indexOfLeft, int length)
+        void HardMove(int indexOfMax, int indexOfMin, int countLeftSide, int countRightSide , int indexOfRight, int indexOfLeft, int length)
         {
             int i;
-            int step = 0;
-            if (stepsLeftSide > stepsRightSide && p_regChips[indexOfRight] != 'L')//если до минимального путь короче через элемент справа
+            int step, stepOtherSide;
+            step = stepOtherSide = p_arrayChips[indexOfMin];
+            if (countLeftSide == countRightSide)//количество элементов массива, которые нужно будет пройти до минимального равны
+            {
+                #region Счёт_сколько_фишек_не_хватает
+                i = indexOfRight;
+                while (i != indexOfMin)
+                {
+                    step += p_arrayChips[i];
+                    if (i == length - 1) i = 0;
+                    else i++;
+                }
+
+                i = indexOfLeft;
+                while (i != indexOfMin)
+                {
+                    stepOtherSide += p_arrayChips[i];
+                    if (i == 0) i = length - 1;
+                    else i--;
+                }
+
+                step = countRightSide * p_count - step;
+                stepOtherSide = countLeftSide * p_count - stepOtherSide;
+                #endregion
+
+
+                if (step > stepOtherSide)//если справа не хватает фише больше
+                {
+                    
+                    if (p_arrayChips[indexOfMax] - p_count < step) step = p_arrayChips[indexOfMax] - p_count;
+                    p_regChips[indexOfMax] = 'R';
+                    Move(indexOfMax, indexOfRight, step);
+                }
+                else
+                {
+                    
+                    if (p_arrayChips[indexOfMax] - p_count < stepOtherSide) stepOtherSide = p_arrayChips[indexOfMax] - p_count;
+                    p_regChips[indexOfMax] = 'L';
+                    Move(indexOfMax, indexOfLeft, stepOtherSide);
+                }
+
+
+            }
+            else if (countLeftSide > countRightSide && p_regChips[indexOfRight] != 'L')//если до минимального путь короче через элемент справа
             {
                 i = indexOfRight;
                 while (i != indexOfMin)
@@ -60,8 +102,7 @@ namespace Chips
                     if (i == length - 1) i = 0;
                     else i++;
                 }
-                step += p_arrayChips[indexOfMin];
-                step = stepsRightSide * p_count - step;
+                step = countRightSide * p_count - step;
                 if (p_arrayChips[indexOfMax] - p_count < step) step = p_arrayChips[indexOfMax] - p_count;
                 p_regChips[indexOfMax] = 'R';
                 Move(indexOfMax, indexOfRight, step);
@@ -75,8 +116,7 @@ namespace Chips
                     if (i == 0) i = length - 1;
                     else i--;
                 }
-                step += p_arrayChips[indexOfMin];
-                step = stepsLeftSide * p_count - step;
+                step = countLeftSide * p_count - step;
                 if (p_arrayChips[indexOfMax] - p_count < step) step = p_arrayChips[indexOfMax] - p_count;
                 p_regChips[indexOfMax] = 'L';
                 Move(indexOfMax, indexOfLeft, step);
@@ -110,10 +150,23 @@ namespace Chips
                 while (p_arrayChips[indexOfMax] > p_count)//работа с маскимальным элементом, пока не будет равен ср.зн.
                 {
                     step = 1;
-                    if (CheckClose(indexOfLeft) && CheckClose(indexOfRight))
+
+                    if (indexOfMax > indexOfMin)//если максимальный стоит после минимального
                     {
-                        if (p_count - p_arrayChips[indexOfLeft] <= p_count - p_arrayChips[indexOfRight])
-                        {
+                        stepsLeftSide = (indexOfMax + 1) - (indexOfMin + 1);//путь слева
+                        stepsRightSide = p_arrayChips.Length - (indexOfMax + 1) + indexOfMin + 1;//путь справа
+                    }
+                    else
+                    {
+                        stepsLeftSide = p_arrayChips.Length - (indexOfMin + 1) + indexOfMax + 1;//путь слева
+                        stepsRightSide = (indexOfMin + 1) - (indexOfMax + 1);//путь справа
+                    }
+
+
+                    if (CheckClose(indexOfLeft) && CheckClose(indexOfRight))//проверка если двум соседним нужны фишки
+                    {
+                        if (p_count - p_arrayChips[indexOfLeft] <= p_count - p_arrayChips[indexOfRight] || stepsLeftSide < stepsRightSide)
+                        {//если левой стороне нужно меньше фишек, чем правой или слева путь до минимальноой короче,чем справа
                             Move(indexOfMax, indexOfLeft, step);
                             p_regChips[indexOfMax] = 'L';
                         }
@@ -135,18 +188,7 @@ namespace Chips
                     }
                     else
                     {
-                        if (indexOfMax > indexOfMin)
-                        {
-                            stepsLeftSide = (indexOfMax + 1) - (indexOfMin + 1);//путь слева
-                            stepsRightSide = p_arrayChips.Length - (indexOfMax + 1) + indexOfMin + 1;//путь справа
-                            HardMove(indexOfMax, indexOfMin, stepsLeftSide, stepsRightSide, indexOfRight, indexOfLeft, len);
-                        }
-                        else
-                        {
-                            stepsLeftSide = p_arrayChips.Length - (indexOfMin + 1) + indexOfMax + 1;//путь слева
-                            stepsRightSide = (indexOfMin + 1) - (indexOfMax + 1);//путь справа
-                            HardMove(indexOfMax, indexOfMin, stepsLeftSide, stepsRightSide, indexOfRight, indexOfLeft, len);
-                        }
+                        HardMove(indexOfMax, indexOfMin, stepsLeftSide, stepsRightSide, indexOfRight, indexOfLeft, len);
                         break;
                     }
                 }
